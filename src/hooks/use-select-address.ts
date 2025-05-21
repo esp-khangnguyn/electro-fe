@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { UseFormReturnType } from '@mantine/form/lib/use-form';
+import { useEffect, useRef } from "react";
+import { UseFormReturnType } from "@mantine/form/lib/use-form";
 
 function useSelectAddress<T>(
   form: UseFormReturnType<T>,
@@ -11,14 +11,17 @@ function useSelectAddress<T>(
 
   useEffect(() => {
     if (!firstRender.current) {
-      form.values[districtIdKey] !== null && form.setFieldValue(districtIdKey, null as T[keyof T]);
-      form.values[wardIdKey] !== null && form.setFieldValue(wardIdKey, null as T[keyof T]);
+      form.values[districtIdKey] !== null &&
+        form.setFieldValue(districtIdKey, null as T[keyof T]);
+      form.values[wardIdKey] !== null &&
+        form.setFieldValue(wardIdKey, null as T[keyof T]);
     }
   }, [form.values[provinceIdKey]]);
 
   useEffect(() => {
     if (!firstRender.current) {
-      form.values[wardIdKey] !== null && form.setFieldValue(wardIdKey, null as T[keyof T]);
+      form.values[wardIdKey] !== null &&
+        form.setFieldValue(wardIdKey, null as T[keyof T]);
     }
   }, [form.values[districtIdKey]]);
 
