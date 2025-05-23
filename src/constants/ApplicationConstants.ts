@@ -1,6 +1,6 @@
 class ApplicationConstants {
   static HOME_PATH =
-    "https://electro-be-hsc7fwcyfrcxdyhv.southeastasia-01.azurewebsites.net";
+    "https://electro-canada-f2b0caf3fyh6dpf6.canadacentral-01.azurewebsites.net";
   static API_PATH = ApplicationConstants.HOME_PATH + "/api";
   static CLIENT_API_PATH = ApplicationConstants.HOME_PATH + "/client-api";
   static WEBSOCKET_PATH = ApplicationConstants.HOME_PATH + "/ws";
